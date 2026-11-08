@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import OfferList from '../offer-list/offer-list';
+import Map from '../map/map';
 import { Offer } from '../../mocks/offers';
 
 type MainPageProps = {
@@ -101,7 +102,7 @@ function MainPage({ offers }: MainPageProps): JSX.Element {
               <OfferList offers={offers} onActiveOfferChange={setActiveOfferId} />
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <Map offers={offers} />
             </div>
           </div>
         </div>
