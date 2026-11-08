@@ -8,6 +8,10 @@ export type Offer = {
   isPremium: boolean;
   isFavorite: boolean;
   rating: number;
+  location: {
+    latitude: number;
+    longitude: number;
+  };
 };
 
 export const offers: Offer[] = [
@@ -21,6 +25,10 @@ export const offers: Offer[] = [
     isPremium: true,
     isFavorite: true,
     rating: 4,
+    location: {
+      latitude: 52.3909553943508,
+      longitude: 4.85309666406198,
+    },
   },
   {
     id: '2',
@@ -32,27 +40,39 @@ export const offers: Offer[] = [
     isPremium: false,
     isFavorite: true,
     rating: 4,
+    location: {
+      latitude: 52.3609553943508,
+      longitude: 4.85309666406198,
+    },
   },
   {
     id: '3',
     title: 'Canal View Prinsengracht',
     type: 'Apartment',
     price: 132,
-    city: 'Cologne',
+    city: 'Amsterdam',
     previewImage: 'img/apartment-02.jpg',
     isPremium: false,
     isFavorite: false,
     rating: 4,
+    location: {
+      latitude: 52.3909553943508,
+      longitude: 4.929309666406198,
+    },
   },
   {
     id: '4',
     title: 'Nice, cozy, warm big bed apartment',
     type: 'Apartment',
     price: 180,
-    city: 'Cologne',
+    city: 'Amsterdam',
     previewImage: 'img/apartment-03.jpg',
     isPremium: true,
     isFavorite: true,
     rating: 5,
+    location: {
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406198,
+    },
   },
 ];
