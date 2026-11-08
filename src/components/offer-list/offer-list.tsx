@@ -3,7 +3,7 @@ import { Offer } from '../../mocks/offers';
 
 type OfferListProps = {
   offers: Offer[];
-  onActiveOfferChange: (id: string) => void;
+  onActiveOfferChange?: (id: string) => void;
 };
 
 function OfferList({ offers, onActiveOfferChange }: OfferListProps): JSX.Element {
@@ -13,7 +13,7 @@ function OfferList({ offers, onActiveOfferChange }: OfferListProps): JSX.Element
         <PlaceCard
           key={offer.id}
           offer={offer}
-          onMouseEnter={() => onActiveOfferChange(offer.id)}
+          onMouseEnter={onActiveOfferChange ? () => onActiveOfferChange(offer.id) : undefined}
         />
       ))}
     </div>

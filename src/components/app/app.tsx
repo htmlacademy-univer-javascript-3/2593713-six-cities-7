@@ -35,7 +35,7 @@ function App({ offers }: AppProps): JSX.Element {
         />
         <Route
           path="/offer/:id"
-          element={<OfferPage />}
+          element={<OfferPage offers={offers} />}
         />
         <Route
           path="*"

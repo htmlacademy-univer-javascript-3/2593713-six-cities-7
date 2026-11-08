@@ -14,9 +14,10 @@ L.Icon.Default.mergeOptions({
 
 type MapProps = {
   offers: Offer[];
+  className?: string;
 };
 
-function Map({ offers }: MapProps): JSX.Element {
+function Map({ offers, className = 'cities__map map' }: MapProps): JSX.Element {
   const mapRef = useRef<L.Map | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -46,7 +47,7 @@ function Map({ offers }: MapProps): JSX.Element {
     };
   }, [offers]);
 
-  return <div className="cities__map map" ref={containerRef}></div>;
+  return <div className={className} ref={containerRef}></div>;
 }
 
 export default Map;
